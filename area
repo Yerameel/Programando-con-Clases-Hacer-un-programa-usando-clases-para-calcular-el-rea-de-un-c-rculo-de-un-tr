@@ -1,0 +1,120 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+{
+  static void Main(string[] args)
+  {
+      // llamado a la clase Cuadrado
+      
+      double xareac, xladoc;
+      
+      Console.WriteLine("-------------------------------------------------");
+      
+      Console.Write("Ingrese el lado del cuadrado: ");
+      xladoc = Int32.Parse(Console.ReadLine());
+      
+      Cuadrado ObjetoCuadrado = new Cuadrado(xladoc);
+    xareac = ObjetoCuadrado.area();
+      Console.WriteLine("El Area del Cuadrado: " + xareac);
+      Console.ReadKey();
+      
+      // llamado a la clase Cuadrado
+      double xarear, xbaser, xalturar;
+      
+      
+      Console.WriteLine("Ingrese la base del rectangulo: ");
+      xbaser = Int32.Parse(Console.ReadLine());
+      Console.Write("Ingrese la altura del rectangulo: ");
+      xalturar = Int32.Parse(Console.ReadLine());
+      
+      Rectangulo ObjetoRectangulo = new Rectangulo (xbaser, xalturar);
+      xarear = ObjetoRectangulo.area();
+      Console.WriteLine("El Area del Rectangulo: " + xarear);
+      Console.ReadKey();
+      
+      // llamado a la clase Triangulo
+      double xareat, xbaset, xalturat;
+      
+      
+      
+      Console.Write("Ingrese la base del Triangulo: ");
+      xbaset = Int32.Parse(Console.ReadLine());
+      Console.Write("Ingrese la altura del Triangulo: ");
+      xalturat = Int32.Parse(Console.ReadLine());
+      
+      Triangulo ObjetoTriangulo = new Triangulo (xbaset, xalturat);
+      xareat = ObjetoTriangulo.area();
+      Console.WriteLine("El Area del Rectangulo: " + xareat);
+      Console.ReadKey();    
+      
+    }
+}
+}
+
+Clase Triangulo
+using System;
+
+namespace MyApplication
+{
+  class Triangulo
+{
+    private double baset, alturat;
+    public Triangulo (double xbaset, double xalturat)
+    {
+        baset = xbaset;
+        alturat = xalturat;
+    }
+    public double area ()
+    {
+        double vareat;
+        vareat = (baset * alturat)/2;
+        return vareat;
+    }
+}
+}
+
+
+
+Clase Rectángulo
+using System;
+
+namespace MyApplication
+{
+  class Rectangulo
+{
+    private double baser, alturar;
+    public Rectangulo (double xbaser, double xalturar)
+    {
+        baser = xbaser;
+        alturar = xalturar;
+    }
+    public double area ()
+    {
+        double varear;
+        varear = baser * alturar;
+        return varear;
+    }
+}
+}
+
+Clase Cuadrado
+
+using System;
+
+namespace MyApplication
+{
+  class Cuadrado
+{
+    private double Ladoc;
+    public Cuadrado(double xladoc)
+    {
+        Ladoc = xladoc;
+    }
+    public double area ()
+    {
+        double vareac;
+        vareac = Ladoc * Ladoc;
+        return vareac;
+    } } }
